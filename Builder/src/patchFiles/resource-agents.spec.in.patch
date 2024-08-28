@@ -1,0 +1,82 @@
+--- orig/resource-agents-3.9.5/resource-agents.spec.in	2013-02-07 12:17:42.000000000 +0000
++++ resource-agents-3.9.5/EXTRlitpresourceagents.spec.in	2014-08-05 13:49:21.355029260 +0100
+@@ -14,7 +14,7 @@
+ %global numcomm @numcomm@
+ %global dirty @dirty@
+ 
+-# 
++#
+ # Since this spec file supports multiple distributions, ensure we
+ # use the correct group for each.
+ #
+@@ -30,7 +30,7 @@
+ %bcond_@rgmanager@ rgmanager
+ %bcond_@linux-ha@ linuxha
+ 
+-Name:		resource-agents
++Name:		EXTRlitpresourceagents
+ Summary:	Open Source HA Reusable Cluster Resource Scripts
+ Version:	@version@
+ Release:	@specver@%{?rcver:%{rcver}}%{?numcomm:.%{numcomm}}%{?alphatag:.%{alphatag}}%{?dirty:.%{dirty}}%{?dist}
+@@ -55,20 +55,20 @@
+ BuildRequires: which
+ 
+ %if 0%{?fedora} || 0%{?centos_version} || 0%{?rhel}
+-BuildRequires: cluster-glue-libs-devel
++#BuildRequires: cluster-glue-libs-devel
+ BuildRequires: docbook-style-xsl docbook-dtds
+ %if 0%{?rhel} == 0
+ BuildRequires: libnet-devel
+ %endif
+ %endif
+ 
+-%if 0%{?suse_version}  
++%if 0%{?suse_version}
+ %if 0%{?suse_version} >= 1140
+ BuildRequires:  libnet1
+ %else
+ BuildRequires:  libnet
+ %endif
+-BuildRequires:  libglue-devel
++#BuildRequires:  libglue-devel
+ BuildRequires:  libxslt docbook_4 docbook-xsl-stylesheets
+ %endif
+ 
+@@ -195,7 +195,7 @@
+ test -d %{buildroot}/sbin || mkdir %{buildroot}/sbin
+ (
+   cd %{buildroot}/sbin
+-  ln -sf /%{_sysconfdir}/init.d/ldirectord rcldirectord 
++  ln -sf /%{_sysconfdir}/init.d/ldirectord rcldirectord
+ ) || true
+ %endif
+ %endif
+@@ -237,8 +237,8 @@
+ 
+ %{_sbindir}/ocf-tester
+ %{_sbindir}/ocft
+-%{_sbindir}/sfex_init
+-%{_sbindir}/sfex_stat
++#%{_sbindir}/sfex_init
++#%{_sbindir}/sfex_stat
+ 
+ %{_includedir}/heartbeat
+ 
+@@ -246,7 +246,7 @@
+ 
+ %{_mandir}/man7/*.7*
+ %{_mandir}/man8/ocf-tester.8*
+-%{_mandir}/man8/sfex_init.8*
++#%{_mandir}/man8/sfex_init.8*
+ 
+ # For compatability with pre-existing agents
+ %dir %{_sysconfdir}/ha.d
+@@ -254,7 +254,7 @@
+ 
+ %{_libdir}/heartbeat
+ 
+-%post -n resource-agents
++%post -n EXTRlitpresourceagents
+ if [ $1 = 2 ]; then
+  if [ -d %{_var}/run/heartbeat/rsctmp ]; then
+   cp -fpr %{_var}/run/heartbeat/rsctmp/* %{_var}/run/resource-agents/ 1>/dev/null 2>&1

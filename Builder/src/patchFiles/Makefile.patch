@@ -1,0 +1,73 @@
+--- orig/resource-agents-3.9.5/Makefile	2014-08-06 11:08:41.178637838 +0100
++++ resource-agents-3.9.5/Makefile	2014-08-05 11:47:01.836090126 +0100
+@@ -123,11 +123,11 @@
+ GZIP_ENV = --best
+ distuninstallcheck_listfiles = find . -type f -print
+ distcleancheck_listfiles = find . -type f -print
+-ACLOCAL = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run aclocal-1.11
+-AMTAR = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run tar
+-AUTOCONF = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run autoconf
+-AUTOHEADER = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run autoheader
+-AUTOMAKE = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run automake-1.11
++ACLOCAL = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run aclocal-1.11
++AMTAR = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run tar
++AUTOCONF = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run autoconf
++AUTOHEADER = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run autoheader
++AUTOMAKE = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run automake-1.11
+ AWK = gawk
+ CC = gcc -std=gnu99
+ CCDEPMODE = depmode=gcc3
+@@ -171,7 +171,7 @@
+ LTLIBOBJS =
+ MAILCMD = /bin/mailx
+ MAKE = gmake
+-MAKEINFO = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/missing --run makeinfo
++MAKEINFO = ${SHELL} /root/resource_test/resource-agents-3.9.5/missing --run makeinfo
+ MD5 =
+ MKDIR_P = /bin/mkdir -p
+ NON_FATAL_CFLAGS = -g -O2 -ggdb3  -fgnu89-inline -fstack-protector-all -Wall -Wbad-function-cast -Wcast-qual -Wcast-align -Wdeclaration-after-statement -Wendif-labels -Wfloat-equal -Wformat=2 -Wformat-security -Wformat-nonliteral -Winline -Wmissing-prototypes -Wmissing-declarations -Wmissing-format-attribute -Wnested-externs -Wno-long-long -Wno-strict-aliasing -Wpointer-arith -Wstrict-prototypes -Wwrite-strings -ansi -D_GNU_SOURCE -DANSI_ONLY
+@@ -181,12 +181,12 @@
+ OCF_RA_DIR = /usr/lib/ocf/resource.d/
+ OCF_RA_DIR_PREFIX = /usr/lib/ocf/resource.d/
+ OCF_ROOT_DIR = /usr/lib/ocf
+-PACKAGE = resource-agents
++PACKAGE = EXTRlitpresourceagents
+ PACKAGE_BUGREPORT = to_be_defined@foobar.org
+-PACKAGE_NAME = resource-agents
+-PACKAGE_STRING = resource-agents UNKNOWN
+-PACKAGE_TARNAME = resource-agents
+-PACKAGE_VERSION = UNKNOWN
++PACKAGE_NAME = EXTRlitpresourceagents
++PACKAGE_STRING = EXTRlitpresourceagents 3.9.5.339-3fa59
++PACKAGE_TARNAME = EXTRlitpresourceagents
++PACKAGE_VERSION = 3.9.5.339-3fa59
+ PATH_SEPARATOR = :
+ PING = /bin/ping
+ PKGCONFIG = /usr/bin/pkg-config
+@@ -209,12 +209,12 @@
+ STRIP =
+ TAR = /bin/tar
+ TEST = /usr/bin/test
+-VERSION = UNKNOWN
++VERSION = 3.9.5.339-3fa59
+ XSLTPROC = /usr/bin/xsltproc
+-abs_builddir = /root/resource_test/orig/resource-agents-3.9.5
+-abs_srcdir = /root/resource_test/orig/resource-agents-3.9.5
+-abs_top_builddir = /root/resource_test/orig/resource-agents-3.9.5
+-abs_top_srcdir = /root/resource_test/orig/resource-agents-3.9.5
++abs_builddir = /root/resource_test/resource-agents-3.9.5
++abs_srcdir = /root/resource_test/resource-agents-3.9.5
++abs_top_builddir = /root/resource_test/resource-agents-3.9.5
++abs_top_srcdir = /root/resource_test/resource-agents-3.9.5
+ ac_ct_CC = gcc
+ am__include = include
+ am__leading_dot = .
+@@ -241,7 +241,7 @@
+ htmldir = ${docdir}
+ includedir = /usr/include
+ infodir = /usr/share/info
+-install_sh = ${SHELL} /root/resource_test/orig/resource-agents-3.9.5/install-sh
++install_sh = ${SHELL} /root/resource_test/resource-agents-3.9.5/install-sh
+ libdir = /usr/lib64
+ libexecdir = /usr/libexec
+ localedir = ${datarootdir}/locale

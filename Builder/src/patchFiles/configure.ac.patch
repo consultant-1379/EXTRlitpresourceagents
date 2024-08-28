@@ -1,0 +1,94 @@
+7c7
+< dnl Bootstrap 
+---
+> dnl Bootstrap
+22c22
+< AC_INIT([resource-agents], 
+---
+> AC_INIT([resource-agents],
+59c59
+< dnl 
+---
+> dnl
+107c107
+< dnl Helpers 
+---
+> dnl Helpers
+166c166
+<  [  --enable-libnet 	Use libnet for ARP based funcationality, [default=try]], 
+---
+>  [  --enable-libnet 	Use libnet for ARP based funcationality, [default=try]],
+232c232
+<       if 
+---
+>       if
+242c242
+<  INITDIRPREFIX="$INITDIR" 
+---
+>  INITDIRPREFIX="$INITDIR"
+268c268
+< dnl Expand autoconf variables so that we dont end up with '${prefix}' 
+---
+> dnl Expand autoconf variables so that we dont end up with '${prefix}'
+302c302
+< do 
+---
+> do
+314c314
+< dnl So keep this section to a bare minimum; regard as a "necessary evil". 
+---
+> dnl So keep this section to a bare minimum; regard as a "necessary evil".
+328c328
+< *linux*)	
+---
+> *linux*)
+333c333
+< darwin*)	
+---
+> darwin*)
+479c479
+< AC_CHECK_LIB(socket, socket)			
+---
+> AC_CHECK_LIB(socket, socket)
+492c492
+< if 
+---
+> if
+503c503
+<         
+---
+> 
+586c586
+<     *Linux*|*linux*) 
+---
+>     *Linux*|*linux*)
+634c634
+<  
+---
+> 
+707c707
+< AC_CHECK_HEADERS(netinet/icmp6.h,[],[],[#include <sys/types.h>])
+---
+> dnl AC_CHECK_HEADERS(netinet/icmp6.h,[],[],[#include <sys/types.h>])
+743,745c743,745
+< 		-Wbad-function-cast 
+< 		-Wcast-qual 
+< 		-Wcast-align 
+---
+> 		-Wbad-function-cast
+> 		-Wcast-qual
+> 		-Wcast-align
+753,754c753,754
+< 		-Wmissing-prototypes 
+< 		-Wmissing-declarations 
+---
+> 		-Wmissing-prototypes
+> 		-Wmissing-declarations
+759c759
+< 		-Wpointer-arith 
+---
+> 		-Wpointer-arith
+865c865
+< dnl Now process the entire list of files added by previous 
+---
+> dnl Now process the entire list of files added by previous
